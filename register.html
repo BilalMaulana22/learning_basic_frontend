@@ -8,28 +8,27 @@
 </head>
 <body>
 
-    <!-- Semua elemen harus ada di dalam tag form ini agar masuk ke kotak putih -->
     <form action="#" method="POST">
         <h2>Daftar Akun Baru</h2>
 
         <div class="input-group">
             <label for="nama">Nama Lengkap:</label>
-            <input type="text" id="nama" name="nama" required>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
         </div>
 
         <div class="input-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="contoh@mail.com" required>
         </div>
 
         <div class="input-group">
             <label for="telp">Nomor Telpon:</label>
-            <input type="tel" id="telp" name="telp" required>
+            <input type="tel" id="telp" name="telp" placeholder="0812xxxx" required>
         </div>
 
         <div class="input-group">
             <label for="pass">Password:</label>
-            <input type="password" id="pass" name="pass" required>
+            <input type="password" id="pass" name="pass" placeholder="Minimal 6 karakter" required>
         </div>
 
         <button type="submit">Register</button>
@@ -37,29 +36,17 @@
         <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
     </form>
 
-</body>
-</html>
-    <!-- ... kode form kamu ... -->
-
     <script>
       const form = document.querySelector('form');
-      
       form.addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        
-        // Mengambil data berdasarkan urutan atau tipe input
-        const nama = document.querySelector('input[type="text"]').value; 
-        const email = document.querySelector('input[type="email"]').value;
-        const telp = document.querySelector('input[type="tel"]').value;
-        const password = document.querySelector('input[type="password"]').value;
-
-        console.log("--- Data Pendaftaran Baru ---");
-        console.log("Nama Lengkap: " + nama);
+        e.preventDefault();
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        console.log("--- Data Registrasi ---");
+        console.log("Nama: " + nama);
         console.log("Email: " + email);
-        console.log("Nomor Telpon: " + telp);
-        console.log("Password: " + password);
-        
-        alert('Pendaftaran berhasil disimulasikan! Cek Console (F12).');
+        alert('Registrasi Berhasil (Simulasi)! Cek Console (F12)');
       });
     </script>
 </body>
+</html>
