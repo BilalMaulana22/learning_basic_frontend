@@ -1,55 +1,116 @@
-*{
- margin:0;
- padding:0;
- box-sizing:border-box;
- font-family:Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
-body{
- display:flex;
- justify-content:center;
- align-items:center;
- height:100vh;
- background:#f4f4f4;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+    /* MOTIF 1: Background Gradasi Linear yang modern */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    
+    /* MOTIF 2: Menambahkan pola titik-titik (dot pattern) halus */
+    background-image: radial-gradient(#4A90E2 0.5px, transparent 0.5px);
+    background-size: 20px 20px; /* Ukuran kerapatan titik */
+    
+    position: relative;
+    overflow: hidden;
 }
 
-.login-container{
- background:white;
- padding:30px;
- border-radius:12px;
- box-shadow:0 4px 10px rgba(0,0,0,0.1);
- width:320px;
- text-align:center;
+/* MOTIF 3: Aksen Lingkaran Dekoratif di latar belakang */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(74, 144, 226, 0.1); /* Warna biru transparan */
+    z-index: -1; /* Agar berada di belakang form */
 }
 
-h2{
- margin-bottom:20px;
+body::before {
+    top: -100px;
+    left: -100px;
 }
 
-input{
- width:100%;
- padding:12px;
- margin:10px 0;
- border:1px solid #ccc;
- border-radius:8px;
+body::after {
+    bottom: -100px;
+    right: -100px;
 }
 
-button{
- width:100%;
- padding:12px;
- border:none;
- background:#2563eb;
- color:white;
- border-radius:8px;
- cursor:pointer;
- font-size:16px;
+/* Modifikasi sedikit pada Form agar lebih 'pop-out' */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px; /* Lebih tumpul agar estetik */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Bayangan lebih dalam */
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Glassmorphism effect */
 }
 
-button:hover{
- opacity:0.9;
+
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Lebar kotak */
 }
 
-#message{
- margin-top:15px;
- font-weight:bold;
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left; /* Pastikan teks rata kiri di dalam kotak */
+}
+
+label {
+    display: block; /* Membuat label berada di atas input */
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
 }

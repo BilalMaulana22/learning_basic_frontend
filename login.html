@@ -35,3 +35,24 @@
 <script src="script.js"></script>
 </body>
 </html>
+    <!-- ... kode form kamu ... -->
+
+    <script>
+      const form = document.querySelector('form');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        
+        // Mengambil data. Tips: Jika input username menggunakan type="text", 
+        // pastikan querySelector-nya tepat.
+        const user = document.querySelector('input[type="text"]').value;
+        const password = document.querySelector('input[type="password"]').value;
+
+        console.log("--- Data Login ---");
+        console.log("Username/Email: " + user);
+        console.log("Password: " + password);
+        
+        alert('Login disimulasikan! Silakan tekan F12 dan cek tab "Console" untuk melihat data kamu.');
+      });
+    </script>
+</body>
