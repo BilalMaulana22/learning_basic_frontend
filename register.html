@@ -37,16 +37,24 @@
     </form>
 
     <script>
-      const form = document.querySelector('form');
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const nama = document.getElementById('nama').value;
-        const email = document.getElementById('email').value;
-        console.log("--- Data Registrasi ---");
-        console.log("Nama: " + nama);
-        console.log("Email: " + email);
-        alert('Registrasi Berhasil (Simulasi)! Cek Console (F12)');
-      });
-    </script>
-</body>
-</html>
+  const form = document.querySelector('#registerForm'); // Menggunakan ID agar lebih spesifik
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Mengambil semua data input
+    const nama = document.querySelector('#nama').value;
+    const email = document.querySelector('#regEmail').value;
+    const telp = document.querySelector('#telp').value; // Ambil data telepon
+    const password = document.querySelector('#regPassword').value;
+
+    console.log("--- Data Pendaftaran Baru ---");
+    console.log("Nama Lengkap: " + nama);
+    console.log("Email       : " + email);
+    console.log("No. Telepon : " + telp);
+    console.log("Password    : " + password);
+    
+    alert('Pendaftaran berhasil! Silakan cek Console (F12).');
+  });
+</script>
+
