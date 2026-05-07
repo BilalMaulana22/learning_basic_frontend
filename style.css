@@ -1,95 +1,92 @@
-/* 4. FONT: Menggunakan Poppins agar modern */
-@import url('https://googleapis.com');
-
+/* Mengatur dasar halaman */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 1. CENTERING: Meletakkan form tepat di tengah halaman */
 body {
-    background: #f0f2f5; /* Warna background abu lembut */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Mengambil tinggi penuh layar */
 }
 
+/* Wadah Utama */
 .auth-container {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 15px; /* Sudut tumpul */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: #8595a5;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     color: #333;
 }
 
-/* 2. STYLING INPUT: Padding, Border-radius, dan Border halus */
+/* Pengaturan Grup Input */
 .input-group {
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #07020c;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px 15px; /* Padding agar teks tidak mepet */
-    border: 1px solid #ddd; /* Border halus */
-    border-radius: 8px; /* Sudut tumpul */
+    padding: 12px;
+    border: 1px solid #d90924;
+    border-radius: 6px;
     outline: none;
     transition: 0.3s;
 }
 
-/* Efek saat input diklik */
 .input-group input:focus {
-    border-color: #4e73df;
-    box-shadow: 0 0 5px rgba(78, 115, 223, 0.2);
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
 }
 
-/* 3. BUTTON: Warna tombol dan efek hover */
+/* Tombol Login */
 .btn-auth {
     width: 100%;
     padding: 12px;
-    background-color: #4e73df; /* Warna utama biru */
-    color: white;
+    background-color: #667eea;
+    color: rgb(23, 21, 21);
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.3s;
+    margin-top: 10px;
 }
 
-/* Efek HOVER: Warna berubah saat kursor menyentuh tombol */
 .btn-auth:hover {
-    background-color: #2e59d9; /* Biru lebih gelap */
-    transform: translateY(-2px); /* Efek sedikit naik */
+    background-color: #5a67d8;
 }
 
+/* Teks Bawah */
 .switch-text {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 13px;
-    color: #777;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #f90505;
 }
 
 .switch-text a {
-    color: #4e73df;
+    color: #012ff7;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .switch-text a:hover {
