@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Halaman Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="auth-container">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-group">
+                <label for="username">Email atau Username</label>
+                <input type="text" id="username" placeholder="Masukkan Email/Username" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <!-- type="password" memastikan teks tidak terlihat -->
+                <input type="password" id="password" placeholder="Masukkan Password" required>
+            </div>
 
-<div class="login-container">
-    <h2>Login</h2>
-
-    <form id="loginForm">
-        <input
-            type="text"
-            id="username"
-            placeholder="Masukkan Username"
-            required
-        >
-
-        <input
-            type="password"
-            id="password"
-            placeholder="Masukkan Password"
-            required
-        >
-
-        <button type="submit">Masuk</button>
-    </form>
-
-    <p id="message"></p>
-</div>
-
-<script src="script.js"></script>
+            <button type="submit" class="btn-auth">Login</button>
+        </form>
+        
+        <p class="switch-text">
+            Belum punya akun? <a href="register.html">Daftar di sini</a>
+        </p>
+    </div>
 </body>
 </html>
